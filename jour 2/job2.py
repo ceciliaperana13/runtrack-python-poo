@@ -4,7 +4,7 @@ class Livre:
         self.__auteur = auteur
         self.__nombre_de_pages = nombre_de_pages
 
-    # ─── Accesseurs ────────────────────────────────────
+    #  Accesseurs 
 
     def get_titre(self):
         return self.__titre
@@ -15,7 +15,7 @@ class Livre:
     def get_nombre_de_pages(self):
         return self.__nombre_de_pages
 
-    # ─── Mutateurs ─────────────────────────────────────
+    # Mutateurs
 
     def set_titre(self, titre):
         self.__titre = titre
@@ -32,7 +32,7 @@ class Livre:
         else:
             print("Erreur : le nombre de pages doit être un entier positif.")
 
-    # ─── Affichage ─────────────────────────────────────
+    #Affichage 
 
     def __str__(self):
         return (f"Titre          : {self.__titre}\n"
