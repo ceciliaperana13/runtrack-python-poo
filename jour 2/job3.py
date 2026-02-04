@@ -5,7 +5,7 @@ class Livre:
         self.__nombre_de_pages = nombre_de_pages
         self.__disponible = True  # Nouveau attribut pour la disponibilité
 
-    #  Accesseurs 
+    # Accesseurs 
 
     def get_titre(self):
         return self.__titre
@@ -32,13 +32,22 @@ class Livre:
             print(f"Nombre de pages changé : {nombre_de_pages}")
         else:
             print("Erreur : le nombre de pages doit être un entier positif.")
-    def  verification_disponibilite(self):
+    
+    def verification_disponibilite(self):
         return self.__disponible 
+    
+    def emprunter(self):
+        if self.__disponible:
+            self.__disponible = False
+            print("Le livre a été emprunté avec succès.")
+        else:
+            print("Le livre n'est pas disponible pour le moment.")
+    
     def rendre(self):
         self.__disponible = True
-        print("Le livre a été rendu et est maintenant disponible.")       
-
-    #  Affichage 
+        print("Le livre a été rendu avec succès.")
+       
+    # Affichage 
 
     def __str__(self):
         return (f"Titre          : {self.__titre}\n"
@@ -48,8 +57,7 @@ class Livre:
                 )
 
 
-
-
+# Test du code
 livre1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry", 96)
 print(livre1)
 
@@ -57,9 +65,14 @@ print("\n--- Modifications ---")
 livre1.set_titre("Animal Farm")
 livre1.set_auteur("George Orwell")
 livre1.set_nombre_de_pages(356)
-print("n--- disponibles ---")
 
-
+print("\n--- Disponibilité ---")
+print(f"Disponible : {livre1.verification_disponibilite()}")
+livre1.emprunter()
+print(f"Disponible : {livre1.verification_disponibilite()}")
+livre1.emprunter()  # Tentative d'emprunt alors qu'il n'est pas disponible
+livre1.rendre()
+print(f"Disponible : {livre1.verification_disponibilite()}")
 
 print("\n--- État final ---")
 print(livre1)
