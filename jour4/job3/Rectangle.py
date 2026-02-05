@@ -7,15 +7,15 @@ class Rectangle:
         self.__longueur = longueur
         self.__largeur = largeur
     #guetters
-    def getlongueur(self):
+    def getLongueur(self):
         return self.__longueur
     
-    def getlargeur(self):
+    def getLargeur(self):
         return self.__largeur
     #setteurs
-    def setlongueur(self, longueur):
+    def setLongueur(self, longueur):
         self.__longueur = longueur
-    def setlargeur(self, largeur):
+    def setLargeur(self, largeur):
         self.__largeur = largeur
     #perimetre
     def perimetre(self):
