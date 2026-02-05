@@ -1,6 +1,6 @@
-from Personne import Personne
-from Eleve import Eleve
-from Proffesseur import Professeur
+from jour4.job1.Personne import Personne
+from jour4.job1.Eleve import Eleve
+from jour4.job1.Proffesseur import Professeur
 
 Personne1 = Personne()
 eleve1 = Eleve()

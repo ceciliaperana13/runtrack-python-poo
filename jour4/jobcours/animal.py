@@ -1,6 +1,6 @@
 
-from chien import Chien
-from oiseau import Oiseau
+from jour4.jobcours.chien import Chien
+from jour4.jobcours.oiseau import Oiseau
 
 
 class Animal:

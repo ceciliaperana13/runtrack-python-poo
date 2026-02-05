@@ -1,4 +1,4 @@
-from Personne import Personne
+from jour4.job1.Personne import Personne
 
 class Professeur(Personne):
     def __init__(self, age=14, matiereEnseignee=None):

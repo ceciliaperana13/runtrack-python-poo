@@ -1,4 +1,4 @@
-from Personne import Personne
+from jour4.job1.Personne import Personne
 
 class Eleve(Personne):
     def aller_en_cours(self):
