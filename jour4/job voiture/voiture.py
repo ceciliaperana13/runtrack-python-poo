@@ -9,3 +9,4 @@ class Voiture:
         self.annee=annee
         self.nombreporte=nombreporte
     def immatricule(self):
+        print(f"la voiture {self.marque} {self.modele} de l'année {self.annee} avec {self.nombreporte} portes coûte {self.prix} euros.")
